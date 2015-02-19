@@ -31,7 +31,10 @@ class SchemaRepositoryService extends BaseSimulation {
             ))
             .check(status.in(200, 409))
             .silent
-        }. exec { 
+        },
+       
+        // TEST
+        exec { 
           http("get schema")
             .get("/schema-repository/v1/"+sys.env("TENANT")+"/performanceTestSchema.json")
             .header("Authorization", "Bearer ${accessToken}")
