@@ -1,4 +1,4 @@
 gatling-test
 =========================
 
-    $mvn gatling:execute -Dgatling.simulationClass=yaassimulation.BaseSimulation
+    $mvn gatling:execute -Dgatling.simulationClass=defaultsimulation.SchemaRepositoryService
