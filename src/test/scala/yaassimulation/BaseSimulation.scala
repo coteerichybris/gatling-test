@@ -48,10 +48,10 @@ abstract class BaseSimulation extends Simulation {
   } 
 
   setUp(
-    hybrisscenarios.inject(rampUsers(900) over (15 minutes)).protocols(httpConf),
+    hybrisscenarios.inject(rampUsers(10) over (1 minutes)).protocols(httpConf),
     
     scenario("Stop-Performance-Test").exec {
-      pause(30 minutes).exec { session =>
+      pause(5 minutes).exec { session =>
         continue.set(false)
         session
       }
