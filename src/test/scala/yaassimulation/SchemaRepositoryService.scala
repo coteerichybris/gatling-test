@@ -31,7 +31,7 @@ class SchemaRepositoryService extends BaseSimulation {
             ))
             .check(status.in(200, 409))
             .silent
-        },
+        }
        
         // TEST
         exec { 
@@ -39,7 +39,7 @@ class SchemaRepositoryService extends BaseSimulation {
             .get("/schema-repository/v1/"+sys.env("TENANT")+"/performanceTestSchema.json")
             .header("Authorization", "Bearer ${accessToken}")
             .check(status.is(200))
-        },
+        }
      
         // AFTER TEST
         NOP
