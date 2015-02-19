@@ -31,7 +31,7 @@ class SchemaRepositoryService extends BaseSimulation {
             ))
             .check(status.in(200, 409))
             .silent
-        )}
+        }
        
         // TEST
         exec { 
