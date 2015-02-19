@@ -4,7 +4,7 @@
 
 	<groupId>io.gatling</groupId>
 	<artifactId>gatling-yaas</artifactId>
-	<version>1.0.0</version>
+	<version>2.0.3</version>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
