@@ -29,7 +29,7 @@ class SchemaRepositoryService extends BaseSimulation {
                 "type": "object"
               }"""
             ))
-            .check(status.in(200))
+            .check(status.in(200, 409))
             .silent
         },
        

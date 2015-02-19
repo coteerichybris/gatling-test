@@ -27,7 +27,7 @@ abstract class BaseSimulation extends Simulation {
     .acceptEncodingHeader("gzip, deflate")
     .userAgentHeader("Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:16.0) Gecko/20100101 Firefox/16.0")
 
-  val scenarios = scenario("Performance-Test").exec {
+  val hybrisscenarios = scenario("Performance-Test").exec {
     randomSwitch(
       getScenarios.map( scenario => (100.0/ getScenarios.size) ->
         group(scenario.name) {
@@ -48,7 +48,7 @@ abstract class BaseSimulation extends Simulation {
   } 
 
   setUp(
-    scenarios.inject(rampUsers(900) over (15 minutes)).protocols(httpConf),
+    hybrisscenarios.inject(rampUsers(900) over (15 minutes)).protocols(httpConf),
     
     scenario("Stop-Performance-Test").exec {
       pause(30 minutes).exec { session =>
